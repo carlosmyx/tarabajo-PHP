@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap');
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(120deg, #43cea2 0%, #185a9d 100%);
+    animation: gradientMove 10s ease-in-out infinite alternate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.container {
+    background: rgba(255,255,255,0.85);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(24,90,157,0.15);
+    padding: 2.5rem 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    max-width: 900px;
+    width: 100%;
+    animation: fadeInUp 1s;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #185a9d;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 4px 12px rgba(67,206,162,0.08);
+    animation: fadeInDown 1s;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.table {
+    background: rgba(255,255,255,0.95);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(24,90,157,0.08);
+    animation: fadeInUp 1.2s;
+}
+
+.table th {
+    background: #43cea2;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: none;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    background-color: #eafaf6;
+}
+
+.btn-primary, .btn-outline-success, .btn-outline-danger {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover, .btn-outline-success:hover, .btn-outline-danger:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 16px #43cea244;
+}
+
+.modal-content {
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #185a9d33;
+    animation: fadeInUp 0.7s;
+}
+
+label, .form-label {
+    color: #185a9d;
+    font-weight: 500;
+}
+
+input.form-control {
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: #eafaf6;
+}
+::-webkit-scrollbar-thumb {
+    background: #43cea2;
+    border-radius: 8px;
+}
+/* Estilos modernos y animados para formularios de actualización */
+.form-actualizar, .form-update, .form-editar {
+    background: rgba(255,255,255,0.97);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px #185a9d22, 0 1.5px 8px #43cea244;
+    padding: 2.2rem 2rem 1.5rem 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    animation: fadeInForm 0.8s;
+    transition: box-shadow 0.3s, transform 0.2s;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-actualizar:hover, .form-update:hover, .form-editar:hover {
+    box-shadow: 0 16px 48px #43cea244, 0 2px 12px #185a9d22;
+    transform: scale(1.01);
+}
+
+@keyframes fadeInForm {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.form-actualizar label,
+.form-update label,
+.form-editar label {
+    color: #185a9d;
+    font-weight: 600;
+    margin-top: 0.7rem;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+    font-size: 1.07rem;
+}
+
+.form-actualizar input.form-control,
+.form-update input.form-control,
+.form-editar input.form-control {
+    border-radius: 14px;
+    border: 1.5px solid #43cea2;
+    margin-bottom: 1.1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-size: 1.05rem;
+    background: #f8fafc;
+}
+
+.form-actualizar input.form-control:focus,
+.form-update input.form-control:focus,
+.form-editar input.form-control:focus {
+    border-color: #9d8e18;
+    box-shadow: 0 0 10px #ce43c588;
+    outline: none;
+    background: #fff;
+}
+
+.form-actualizar button[type="submit"],
+.form-update button[type="submit"],
+.form-editar button[type="submit"] {
+    margin-top: 0.8rem;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #bece43 0%, #185a9d 100%);
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px #185a9d33;
+    transition: background 0.3s, color 0.2s, transform 0.2s;
+    font-size: 1.1rem;
+}
+
+.form-actualizar button[type="submit"]:hover,
+.form-update button[type="submit"]:hover,
+.form-editar button[type="submit"]:hover {
+    background: #fff;
+    color: #185a9d;
+    border: 1.5px solid #185a9d;
+    transform: scale(1.05);
+}
+.regresar-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-regresar {
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.7rem 1.7rem;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 2px 12px #185a9d22;
+    transition: background 0.3s, color 0.2s, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.btn-regresar:hover {
+    background: #fff;
+    color: #185a9d;
+    border: 2px solid #185a9d;
+    transform: scale(1.05);
+} 
+
+.btn-agregar-departamento {
+    background: linear-gradient(90deg, #ffb347 0%, #43cea2 100%);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 0.85rem 2.2rem;
+    border: none;
+    border-radius: 32px;
+    box-shadow: 0 4px 18px #43cea244, 0 1.5px 8px #ffb34744;
+    transition: background 0.3s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-agregar-departamento:hover, .btn-agregar-departamento:focus {
+    background: linear-gradient(90deg, #43cea2 0%, #ffb347 100%);
+    color: #185a9d;
+    box-shadow: 0 8px 32px #ffb34744, 0 2px 12px #43cea244;
+    transform: scale(1.06);
+    outline: none;
+}
+
+.btn-agregar-departamento:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px #43cea244;
+}
+.btn-agregar-departamento {
+    background: linear-gradient(90deg, #ffb347 0%, #43cea2 100%);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 0.85rem 2.2rem;
+    border: none;
+    border-radius: 32px;
+    box-shadow: 0 4px 18px #43cea244, 0 1.5px 8px #ffb34744;
+    transition: background 0.3s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-agregar-departamento:hover, .btn-agregar-departamento:focus {
+    background: linear-gradient(90deg, #43cea2 0%, #ffb347 100%);
+    color: #185a9d;
+    box-shadow: 0 8px 32px #ffb34744, 0 2px 12px #43cea244;
+    transform: scale(1.06);
+    outline: none;
+}
+
+.btn-agregar-departamento:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px #43cea244;
+}
